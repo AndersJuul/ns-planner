@@ -59,7 +59,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>BF9C763FF3D7EF2B2EE136C4C80F33AC515DAEBC</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>0FD8FC42DFE9250ABEDE8B410DE0D3D387E3F665</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>ajf.ns-planner.MergeAndSend_TemporaryKey.pfx</ManifestKeyFile>
