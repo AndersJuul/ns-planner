@@ -5,12 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ajf.ns-planner.test", "ajf.ns-planner.test\ajf.ns-planner.test.csproj", "{A0A8B9A9-E1BF-499F-A451-13A329258346}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{2A64E314-7556-4CED-819F-DFE3D2922A82}"
-	ProjectSection(SolutionItems) = preProject
-		TestData\ReqFiles\Arrangementer_efterår_2015 (svar) - Kopi.xls = TestData\ReqFiles\Arrangementer_efterår_2015 (svar) - Kopi.xls
-		TestData\CounsellorFiles\Counsellor.xls = TestData\CounsellorFiles\Counsellor.xls
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ajf.ns-planner.shared2", "ajf.ns-planner.shared2\ajf.ns-planner.shared2.csproj", "{FEDCD653-4785-4B3B-B169-F8C5FFF2C7E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ajf.ns-planner.MergeAndSend", "ajf.ns-planner.MergeAndSend\ajf.ns-planner.MergeAndSend.csproj", "{DFB6C95B-F02F-4758-8B46-C2AE4477C549}"
