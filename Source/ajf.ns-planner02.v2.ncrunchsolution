@@ -1,0 +1,20 @@
+﻿<SolutionConfiguration>
+  <FileVersion>1</FileVersion>
+  <InferProjectReferencesUsingAssemblyNames>false</InferProjectReferencesUsingAssemblyNames>
+  <AllowParallelTestExecution>false</AllowParallelTestExecution>
+  <AllowTestsToRunInParallelWithThemselves>true</AllowTestsToRunInParallelWithThemselves>
+  <FrameworkUtilisationTypeForNUnit>UseDynamicAnalysis</FrameworkUtilisationTypeForNUnit>
+  <FrameworkUtilisationTypeForGallio>UseStaticAnalysis</FrameworkUtilisationTypeForGallio>
+  <FrameworkUtilisationTypeForMSpec>UseStaticAnalysis</FrameworkUtilisationTypeForMSpec>
+  <FrameworkUtilisationTypeForMSTest>UseStaticAnalysis</FrameworkUtilisationTypeForMSTest>
+  <FrameworkUtilisationTypeForXUnit2>UseDynamicAnalysis</FrameworkUtilisationTypeForXUnit2>
+  <NCrunchCacheStoragePath></NCrunchCacheStoragePath>
+  <MetricsExclusionList>
+ajf.ns-planner.MergeAndSend\ajf.ns-planner.MergeAndSend.csproj
+ajf.ns-planner.shared\ajf.ns-planner.shared.csproj
+ajf.ns-planner.shared2\ajf.ns-planner.shared2.csproj\Interfaces
+ajf.ns-planner.shared2\ajf.ns-planner.shared2.csproj\Properties
+Annotations.cs:ajf.ns-planner.shared2\ajf.ns-planner.shared2.csproj
+BasicMerge\MergeService.cs:ajf.ns-planner.shared2\ajf.ns-planner.shared2.csproj
+</MetricsExclusionList>
+</SolutionConfiguration>

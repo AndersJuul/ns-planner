@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="ajf.ns_planner.wpf.UserControls.RequestSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:userControls="clr-namespace:ajf.ns_planner.wpf.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="PapayaWhip">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="0" Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <DataGrid ItemsSource="{Binding Requests}" SelectionMode="Single" CanUserResizeRows="False" AutoGenerateColumns="False" SelectedItem="{Binding SelectedRequest}">
+                <DataGrid.Resources>
+                    <userControls:BindingProxy x:Key="proxy" Data="{Binding}"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding RequestTime, StringFormat=\{0:yyyy-MM-dd HH:mm:ss\}}" 
+                                        Header="Tid" FontWeight="Bold" Visibility="{Binding Data.RequestTimeVisibility,
+                                                Source={StaticResource proxy}}" />
+                    <DataGridTextColumn Binding="{Binding ContactName}" 
+                                        Header="Navn" FontWeight="Normal" Visibility="{Binding Data.ContactNameVisibility,
+                                                Source={StaticResource proxy}}" />
+                    <DataGridTextColumn Binding="{Binding ContactPhone}" 
+                                        Header="Tlf" FontWeight="Normal" Visibility="{Binding Data.ContactDetailsVisibility,
+                                                Source={StaticResource proxy}}" />
+                    <DataGridTextColumn Binding="{Binding ContactEmail}" 
+                                        Header="Email" FontWeight="Normal" Visibility="{Binding Data.ContactDetailsVisibility,
+                                                Source={StaticResource proxy}}" />
+                    <DataGridTextColumn Binding="{Binding ApplicantName}" 
+                                        Header="Ansøger" FontWeight="Normal"  />
+                    <DataGridTextColumn Binding="{Binding ParticipantGroup}" 
+                                        Header="Deltagergrupper" FontWeight="Normal"  />
+                    <DataGridTextColumn Binding="{Binding ParticipantAge}" 
+                                        Header="Deltager-alder" FontWeight="Normal"  />
+                    <DataGridTextColumn Binding="{Binding ParticipantNumber}" 
+                                        Header="Deltager-antal" FontWeight="Normal"  />
+                    <DataGridTextColumn Binding="{Binding RequestedEvent}" 
+                                        Header="Ønsket arrangement" FontWeight="Normal"  />
+                    <DataGridTextColumn Binding="{Binding RequestedMeetingPlace}" 
+                                        Header="Ønsket mødested" FontWeight="Normal"  />
+                    <DataGridTextColumn Binding="{Binding RequestedDate}" 
+                                        Header="Ønsket dato" FontWeight="Normal"  />
+                    <DataGridTextColumn Binding="{Binding Comments}" 
+                                        Header="Kommentarer" FontWeight="Normal"  />
+                </DataGrid.Columns>
+                </DataGrid>
+        </ScrollViewer>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left">
+            <Button Content="Tilføj vejleder/dato" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding AddCounsellorDateToRequestCommand}"/>
+            <CheckBox Content="Vis dato/tid" IsChecked="{Binding ShowTimeStamp}"/>
+            <CheckBox Content="Vis kontaktdetaljer" IsChecked="{Binding ShowContactDetails}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

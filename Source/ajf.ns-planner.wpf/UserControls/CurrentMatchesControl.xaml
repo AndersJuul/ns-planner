@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="ajf.ns_planner.wpf.UserControls.CurrentMatchesControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:userControls="clr-namespace:ajf.ns_planner.wpf.UserControls"
+             mc:Ignorable="d" Background="LightBlue"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0" >
+            <userControls:CurrentSelectionControl/>
+            <Button Content="Tilføj som match" Command="{Binding AddSelectedAsNewMatchCommand}"/>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <DataGrid ItemsSource="{Binding CurrentMatches}" SelectionMode="Single" CanUserResizeRows="False" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Request.ShortIdString}" Header="Ønske" FontWeight="Normal"  />
+                        <DataGridTextColumn Binding="{Binding SchoolEvent.ShortIdString}" Header="Arrangement" FontWeight="Normal"  />
+                        <DataGridTextColumn Binding="{Binding CounsellorDate.ShortIdString}" Header="Vejleder/Dato" FontWeight="Normal"  />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+            <Button Content="Tilføj vejleder/dato" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding AddCounsellorDateToRequestCommand}"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

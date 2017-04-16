@@ -1,0 +1,19 @@
+<settings>
+  <add key="RequestFile" value="A.xls" />
+  <add key="DestinationFile" value="Resultater\{0}Result.xls" />
+  <add key="CounsellorFile" value="B.xls" />
+  <add key="EventFile" value="C.xls" />
+  <add key="PlaceFile" value="D.xls" />
+  <add key="VejlederColumn" value="P" />
+  <add key="StedColumn" value="U" />
+  <add key="DatoColumn" value="Q" />
+  <add key="ArrangementColumn" value="T" />
+  <add key="TidFraColumn" value="R" />
+  <add key="TidTilColumn" value="S" />
+  <add key="FirstWriteableColumn" value="W" />
+  <add key="SenderMailAddress" value="andersjuulsfirma@gmail.com" />
+  <add key="MailGroupSize" value="10" />
+  <add key="StartDate" value="2016-01-01" />
+  <add key="EndDate" value="2016-06-30" />
+  <add key="TestMailReceiver" value="anders_privat@hotmail.com" />
+</settings>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{342E0390-2A3C-492D-8BE9-0A277CE409C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ajf.ns_planner.commands</RootNamespace>
+    <AssemblyName>ajf.ns-planner.commands</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ajf.ns-planner.commands.if\ajf.ns-planner.commands.if.csproj">
+      <Project>{C1547127-7E0C-4888-97B3-88B507C86C74}</Project>
+      <Name>ajf.ns-planner.commands.if</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ajf.ns-planner.datalayer\ajf.ns-planner.datalayer.csproj">
+      <Project>{4C7610EF-AB0D-49D5-90E1-08E11FCBBB46}</Project>
+      <Name>ajf.ns-planner.datalayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ajf.ns-planner.servicelayer\ajf.ns-planner.servicelayer.csproj">
+      <Project>{778CE6AC-D496-4DFC-8B4A-6FE4AC83C307}</Project>
+      <Name>ajf.ns-planner.servicelayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ajf.ns-planner.shared\ajf.ns-planner.shared.csproj">
+      <Project>{B78011A5-DE23-401F-9BBF-23B1F91D874C}</Project>
+      <Name>ajf.ns-planner.shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ajf.ns-planner.viewmodels.if\ajf.ns-planner.viewmodels.if.csproj">
+      <Project>{fa327a48-5202-4a27-819a-9d24b7b88aa8}</Project>
+      <Name>ajf.ns-planner.viewmodels.if</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ajf.ns-planner.viewmodels\ajf.ns-planner.viewmodels.csproj">
+      <Project>{E53A8AA6-68D5-4478-BF8E-5573659B3873}</Project>
+      <Name>ajf.ns-planner.viewmodels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
