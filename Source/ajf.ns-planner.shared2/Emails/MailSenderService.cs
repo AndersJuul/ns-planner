@@ -37,8 +37,7 @@ namespace ajf.ns_planner.shared2.Emails
             _logItemListViewModel.CreateInfo("Batch time: " + batchTime.ToString("F"));
 
             var fromMailAddress = new MailAddress(plannerSettings.SenderMailAddress);
-            var networkCredential = new NetworkCredential("azure_9ce305d9c6ab84b3d5fb7723deca51f5@azure.com",
-                "6oi3vEdJl5GldVc");
+            var networkCredential = new NetworkCredential("jcianders", "21Bananer");
             var transport = new Web(networkCredential);
 
             var sendToTestEmail =
