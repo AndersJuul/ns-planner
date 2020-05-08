@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -37,7 +38,11 @@ namespace ajf.ns_planner.shared2.Emails
             _logItemListViewModel.CreateInfo("Batch time: " + batchTime.ToString("F"));
 
             var fromMailAddress = new MailAddress(plannerSettings.SenderMailAddress);
-            var networkCredential = new NetworkCredential("jcianders", "21Bananer");
+
+            var sendgridcredentials = File.ReadAllLines(Path.Combine(plannerSettings.Directory, "sendgridcredentials.txt"));
+
+            //var networkCredential = new NetworkCredential("jcianders", "21Bananer");
+            var networkCredential = new NetworkCredential(sendgridcredentials[0], sendgridcredentials[1]);
             var transport = new Web(networkCredential);
 
             var sendToTestEmail =
