@@ -40,10 +40,12 @@ namespace ajf.ns_planner.shared2.Emails
             var fromMailAddress = new MailAddress(plannerSettings.SenderMailAddress);
 
             var sendgridcredentials = File.ReadAllLines(Path.Combine(plannerSettings.Directory, "sendgridcredentials.txt"));
-
+            var apikey = sendgridcredentials[0];
             //var networkCredential = new NetworkCredential("jcianders", "21Bananer");
-            var networkCredential = new NetworkCredential(sendgridcredentials[0], sendgridcredentials[1]);
-            var transport = new Web(networkCredential);
+            //var networkCredential = new NetworkCredential(sendgridcredentials[0], sendgridcredentials[1]);
+
+            //var transport = new Web(networkCredential);
+            var transport = new Web(apikey);
 
             var sendToTestEmail =
                 _messageBoxService.ShowYesNoCancel(
